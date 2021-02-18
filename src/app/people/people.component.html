@@ -1,0 +1,9 @@
+<h1 class="text-center my-3">Celebrities</h1>
+<div class="row">
+    <div *ngFor="let item of people" class="col-md-2 my-3">
+        <div class="poster">
+            <img class="w-100 mb-2" src="https://image.tmdb.org/t/p/original/{{item.profile_path}}" alt="">
+            <h5 class="text-center">{{item.name}}</h5>
+        </div>
+    </div>
+</div>

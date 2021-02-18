@@ -1,0 +1,40 @@
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthGuardService } from '../auth-guard.service';
+import { AuthService } from '../auth.service';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
+})
+export class LoginComponent implements OnInit {
+
+  constructor(private _AuthService:AuthService, private _Router:Router,private _AuthGuardService:AuthGuardService) { }
+  loginForm:FormGroup=new FormGroup({
+    'email':new FormControl(null,[Validators.required,Validators.email]),
+    'password':new FormControl(null,[Validators.required,Validators.pattern(/[A-Za-z]{1,}[0-9]{1,}/),Validators.minLength(8)]),
+
+  })
+  login(){
+    if(this.loginForm.invalid){
+      return
+    }
+    this._AuthService.loginData(this.loginForm.value).subscribe((data)=>{
+       if(data.message=="success"){
+         localStorage.setItem("token",data.token)
+         this._AuthGuardService.isLogin.next(true)
+         this._Router.navigateByUrl("/home")
+
+       }
+       else{
+         this.loginForm.reset()
+         alert(data.message)
+       }
+    })
+  }
+  ngOnInit(): void {
+  }
+
+}

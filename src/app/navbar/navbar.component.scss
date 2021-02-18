@@ -1,0 +1,31 @@
+@import "../../styles.scss";
+
+
+.navbar{
+    background-color: $lightBgColor;
+    .nav-link{
+        color: $fontColor;
+    }
+    
+        a:hover, .active{
+        
+            color: red;
+        
+    }
+    .dropdown:hover .dropdown-menu {
+        .dropdown-item{
+            color: $fontColor;
+        }
+        .dropdown-item:hover{
+            background-color: blueviolet !important;
+        }
+        background-color: $bgColor;
+        display: block;
+        margin-top: 0;
+     }
+   
+    i{
+        margin: 0 0.5rem;
+    }
+}
+
