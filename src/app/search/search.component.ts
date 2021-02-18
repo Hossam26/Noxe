@@ -11,6 +11,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 export class SearchComponent implements OnInit {
 target:any=""
 allData:any[]=[]
+found:boolean=false
 constructor(private _DataService:DataService, private _ActivatedRoute:ActivatedRoute, private Spinner:NgxSpinnerService) { 
   this._ActivatedRoute.params.subscribe(()=>{
     this.target=_ActivatedRoute.snapshot.paramMap.get("target")
@@ -23,6 +24,12 @@ constructor(private _DataService:DataService, private _ActivatedRoute:ActivatedR
       this.allData=this.allData.filter((item:any)=>{
         return item.media_type!=null
       })
+      if(this.allData[0]){
+        this.found=true
+      }
+      else{
+        this.found=false
+      }
     })
   })
 }

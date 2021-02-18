@@ -15,10 +15,11 @@
     .dropdown:hover .dropdown-menu {
         .dropdown-item{
             color: $fontColor;
+            &:hover{
+                background-color: blueviolet !important;
+            }
         }
-        .dropdown-item:hover{
-            background-color: blueviolet !important;
-        }
+        
         background-color: $bgColor;
         display: block;
         margin-top: 0;

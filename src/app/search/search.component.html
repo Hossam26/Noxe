@@ -1,6 +1,6 @@
 <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
-
-<div class="row">
+<h1 class=" font-weight-bolder text-center text-white" *ngIf="!found">No Resources found!</h1>
+<div class="row" *ngIf="found">
     <div *ngFor="let item of allData" class="col-md-2 overflow-hidden">
         <div class="poster position-relative overflow-hidden">
             <img class="w-100" src="https://image.tmdb.org/t/p/original/{{item?.poster_path}}" alt="">
