@@ -7,10 +7,6 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'Noxe';
-  ngOnInit(): void {
-    window.addEventListener("beforeunload",function(){
-      localStorage.removeItem("token")
-    })
-  }
+  
 
 }
