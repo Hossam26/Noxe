@@ -12,6 +12,9 @@
             color: red;
         
     }
+    .navbar-toggler{
+        border: 1px rgba(0, 0, 0,0.7) solid;
+    }
     .dropdown:hover .dropdown-menu {
         .dropdown-item{
             color: $fontColor;
