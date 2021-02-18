@@ -5,14 +5,16 @@ import {BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuardService implements CanActivate {
+  isLogin= new BehaviorSubject(false)
   canActivate():boolean|Observable<any>{
     let token=localStorage.getItem("token");
     if (token){
+      this.isLogin.next(true)
       return true
     }
     this._Router.navigateByUrl("/login")
+    this.isLogin.next(false)
     return false
   }
-  isLogin= new BehaviorSubject(false)
   constructor(private _Router:Router) { }
 }
