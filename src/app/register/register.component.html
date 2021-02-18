@@ -7,7 +7,7 @@
             <label>First Name</label>
             <input [class.is-invalid]="registerForm.controls.first_name.invalid&&registerForm.controls.first_name.touched" formControlName="first_name" type="text" class=" form-control mt-1 rounded">
             <div *ngIf="registerForm.controls.first_name.invalid&&registerForm.controls.first_name.touched"  class="alert my-2 ml-2 ">
-               Your first name is not valid
+               Your first name is not valid, no space, special chars or numbers allowed
            </div>
         </div>
         </div>
@@ -17,7 +17,7 @@
                 <label>Last Name</label>
                 <input [class.is-invalid]="registerForm.controls.last_name.invalid&&registerForm.controls.last_name.touched" formControlName="last_name" type="text" class="form-control mt-1 rounded">
                 <div *ngIf="registerForm.controls.last_name.invalid&&registerForm.controls.last_name.touched"  class="alert my-2 ml-2 ">
-                   Your last name is not valid
+                   Your last name is not valid, no space, special chars or numbers allowed
                </div>
             </div>
             </div>

@@ -37,7 +37,7 @@
            
         </ul>
         <form *ngIf="showMenuItem" class="form-inline my-2 my-lg-0" >
-            <input oncanplay class="form-control mr-sm-2" (keyup)="targetInfo($event)" type="text" placeholder="Search">
+            <input  class="form-control mr-sm-2" (keyup)="targetInfo($event)" type="text" placeholder="Search by word">
           <a  routerLink="/search/{{target}}" ><button class="btn btn-dark"><i class="fa fa-search py-1"></i></button></a>  
         </form>
         <i  class="fab fa-facebook"></i>

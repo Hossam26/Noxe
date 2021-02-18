@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-
+import { NgxSpinnerService } from "ngx-spinner";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,8 +10,10 @@ export class HomeComponent implements OnInit {
   allData:any[]=[]
 trendingMovies:any[]=[]
 trendingShows:any[]=[]
-  constructor(private _DataService:DataService) { 
+  constructor(private _DataService:DataService, private Spinner:NgxSpinnerService) { 
+    Spinner.show()
     _DataService.getTrending("all").subscribe((data)=>{
+      Spinner.hide()
       this.allData=data.results.filter((item:any)=>{
         return item.poster_path!=null
       })

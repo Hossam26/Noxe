@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-search',
@@ -10,10 +11,12 @@ import { DataService } from '../data.service';
 export class SearchComponent implements OnInit {
 target:any=""
 allData:any[]=[]
-constructor(private _DataService:DataService, private _ActivatedRoute:ActivatedRoute) { 
+constructor(private _DataService:DataService, private _ActivatedRoute:ActivatedRoute, private Spinner:NgxSpinnerService) { 
   this._ActivatedRoute.params.subscribe(()=>{
     this.target=_ActivatedRoute.snapshot.paramMap.get("target")
+   Spinner.show()
     _DataService.search(this.target).subscribe((response)=>{
+     Spinner.hide()
       this.allData=response.results.filter((item:any)=>{
         return item.poster_path!=null
       })
