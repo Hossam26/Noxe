@@ -9,10 +9,12 @@ import {AuthGuardService } from '../auth-guard.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
- showMenuItem:boolean=false 
+ showMenuItem:any; 
  target:any=""
   constructor(private _Router:Router, private _AuthGuardService:AuthGuardService) { 
-   
+    this._AuthGuardService.isLogin.subscribe((flag)=>{
+      this.showMenuItem=flag
+    })
       
     
   }
@@ -26,9 +28,7 @@ targetInfo(eventInfo:any){
   this.target=eventInfo.target.value
 }
   ngOnInit(): void {
-    this._AuthGuardService.isLogin.subscribe((flag)=>{
-      this.showMenuItem=flag
-    })
+   
   }
 
 }
