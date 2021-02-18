@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
     }
     this._AuthService.loginData(this.loginForm.value).subscribe((data)=>{
        if(data.message=="success"){
-         console.log(data)
          localStorage.setItem("token",data.token)
          this._Toastr.success(`Welcome ${data.user.first_name}`)
          this._AuthGuardService.isLogin.next(true)
