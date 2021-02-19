@@ -46,7 +46,7 @@ export class DetailsComponent implements OnInit {
           if(videos.results[0].key){
              this.showRow=true
           }
-          this.videoSrc=`https://www.youtube.com/embed/${this.Trailer}`
+          this.videoSrc=`https://www.youtube.com/embed/${this.Trailer}?rel=0`
         })
       })
 

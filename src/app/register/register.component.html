@@ -1,5 +1,6 @@
-<h1 class="my-5 text-center">Registeration Form</h1>
-
+<ngx-spinner bdColor ="rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<div class="px-4 my-2">
+    <h1 class="my-5 text-center">Registeration Form</h1>
 <form [formGroup]="registerForm" (ngSubmit)="register()">
     <div class="col-md-9 offset-md-2 mt-5">
            
@@ -43,8 +44,9 @@
                     </div>
                     </div>
              <div class="col-md-9 offset-md-2 mt-2">
-                <button [disabled]="registerForm.invalid" class="btn btn-info" type="submit">Register</button>
+                <button class="btn btn-info" type="submit">Register</button>
 
              </div>
              <p class="text-center my-3">Have an account? <a class="text-primary text-decoration-none" routerLink="/login">Sign In</a></p>
                  </form>
+</div>

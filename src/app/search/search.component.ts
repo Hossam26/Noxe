@@ -17,11 +17,12 @@ constructor(private _DataService:DataService, private _ActivatedRoute:ActivatedR
     this.target=_ActivatedRoute.snapshot.paramMap.get("target")
    Spinner.show()
     _DataService.search(this.target).subscribe((response)=>{
-     Spinner.hide()
+     
       this.allData=response.results.filter((item:any)=>{
         return item.poster_path!=null
       })
       this.allData=this.allData.filter((item:any)=>{
+        Spinner.hide()
         return item.media_type!=null
       })
       if(this.allData[0]){
@@ -30,6 +31,7 @@ constructor(private _DataService:DataService, private _ActivatedRoute:ActivatedR
       else{
         this.found=false
       }
+      Spinner.hide()
     })
   })
 }

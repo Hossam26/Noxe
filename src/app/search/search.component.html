@@ -1,5 +1,6 @@
 <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
-<h1 class=" font-weight-bolder text-center text-white" *ngIf="!found">No Resources found!</h1>
+<div class="px-4 my-2">
+    <h1 class=" font-weight-bolder text-center text-white" *ngIf="!found">No Resources found!</h1>
 <div class="row" *ngIf="found">
     <div *ngFor="let item of allData" class="col-md-2 overflow-hidden">
         <div class="poster position-relative overflow-hidden">
@@ -13,4 +14,5 @@
          </div>
          <h5 class="text-center mt-2">{{item.name}}{{item.original_title}}</h5>
     </div>
+</div>
 </div>
