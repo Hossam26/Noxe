@@ -1,5 +1,7 @@
 @import "../../styles.scss";
-
+*{
+  overflow-x: hidden;
+}
 iframe{
   
     height:65vh;
