@@ -11,7 +11,7 @@ export class PeopleComponent implements OnInit {
   people:any[]=[]
   constructor(private _DataService:DataService, private Spinner:NgxSpinnerService) { 
     Spinner.show()
-      _DataService.getData("person","popular").subscribe((response)=>{
+      _DataService.getData("person","popular",1).subscribe((response)=>{
         Spinner.hide()
         this.people=response.results.filter((item:any)=>{
           return item.profile_path!=null

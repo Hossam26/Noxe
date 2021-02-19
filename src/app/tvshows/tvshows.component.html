@@ -12,3 +12,11 @@
          <h5 class="text-center mt-2">{{item.name}}</h5>
     </div>
 </div>
+<div class="row mb-4">
+    <div class="col-md-12 d-flex justify-content-center align-content-center">
+        <a  routerLink="/tvshows/{{type}}/{{page}}" ><button *ngIf="disablePrev" (click)="Prev()" class="bg-transparent border-0"><i class="fa fa-3x fa-arrow-circle-left" aria-hidden="true"></i></button></a> 
+        <div class="mx-3 mt-3">{{page}}</div>
+                <a routerLink="/tvshows/{{type}}/{{page}}" ><button *ngIf="disableNext" (click)="Next()" class="bg-transparent border-0"><i class="fa fa-3x fa-arrow-circle-right" aria-hidden="true"></i></button></a> 
+
+            </div>
+</div>

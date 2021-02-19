@@ -12,8 +12,8 @@ export class DataService {
   getTrending(mediaType:any):Observable<any>{
     return this._HttpClient.get(`https://api.themoviedb.org/3/trending/${mediaType}/day?api_key=4e7812d8ee04b5c30817c6bd07a9474e`)
   }
-  getData(mediaType:any,mediaCategory:any):Observable<any>{
-    return this._HttpClient.get(`https://api.themoviedb.org/3/${mediaType}/${mediaCategory}?api_key=4e7812d8ee04b5c30817c6bd07a9474e`)
+  getData(mediaType:any,mediaCategory:any,page:number):Observable<any>{
+    return this._HttpClient.get(`https://api.themoviedb.org/3/${mediaType}/${mediaCategory}?api_key=4e7812d8ee04b5c30817c6bd07a9474e&page=${page}`)
   }
   getDetails(mediaType:any,id:any):Observable<any>{
     return this._HttpClient.get(`https://api.themoviedb.org/3/${mediaType}/${id}?api_key=4e7812d8ee04b5c30817c6bd07a9474e`)
