@@ -10,6 +10,7 @@ $borderHeight:1px;
 $secondFontColor:#949cb0;
 
 body{
+    overflow-x: hidden;
     background-color: $bgColor;
     color: $fontColor;
     font-family: 'Montserrat Alternates', sans-serif;

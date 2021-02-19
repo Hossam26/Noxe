@@ -1,6 +1,7 @@
 @import "../../styles.scss";
 
 iframe{
+  
     height:65vh;
     width: 65vw;
 }
@@ -10,6 +11,6 @@ h4{
 @media screen and (max-width:700px){
   iframe{
     height:45vh;
-    width: 100vw ;
+    width: 100% ;
 }
 }
