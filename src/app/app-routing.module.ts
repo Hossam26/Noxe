@@ -9,6 +9,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { NetworksComponent } from './networks/networks.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PeopleComponent } from './people/people.component';
+import { PersonDetailsComponent } from './person-details/person-details.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { TvshowsComponent } from './tvshows/tvshows.component';
@@ -16,16 +17,17 @@ import { TvshowsComponent } from './tvshows/tvshows.component';
 const routes: Routes = [
   {path:'' ,redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent,canActivate:[AuthGuardService]},
-  {path:'about',component:AboutComponent},
+  {path:'about',component:AboutComponent,canActivate:[AuthGuardService]},
   {path:'movies/:genre/:page',component:MoviesComponent,canActivate:[AuthGuardService]},
   {path:'tvshows/:genre/:page',component:TvshowsComponent,canActivate:[AuthGuardService]},
   {path:'details/:mediaType/:id',component:DetailsComponent,canActivate:[AuthGuardService]},
+  {path:'person/:id',component:PersonDetailsComponent,canActivate:[AuthGuardService]},
   {path:'search/:target',component:SearchComponent,canActivate:[AuthGuardService]},
-  {path:'people',component:PeopleComponent,canActivate:[AuthGuardService]},
-  {path:'networks',component:NetworksComponent},
+  {path:'people/:page',component:PeopleComponent,canActivate:[AuthGuardService]},
+  {path:'networks',component:NetworksComponent,canActivate:[AuthGuardService]},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:"**",component:NotfoundComponent}
+  {path:"**",component:NotfoundComponent,canActivate:[AuthGuardService]}
 ];
 
 @NgModule({

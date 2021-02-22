@@ -13,12 +13,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import {HttpClientModule} from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { PersonDetailsComponent } from './person-details/person-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     NotfoundComponent,
     DetailsComponent,
     SearchComponent,
+    PersonDetailsComponent,
+     
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     ToastrModule.forRoot(),
     NgxSpinnerModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
