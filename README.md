@@ -1,27 +1,19 @@
-# Noxe
+# Noxe Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+## Overview
+An application that offers help with searching for a good movie or TV show to watch. It shows you the trailer, overview, genres, and rate. It also helps you to know the popular actors and who they are.
 
-## Development server
+## Implemented and Learned Topics
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### I learned...
 
-## Code scaffolding
+#### -How to use Angular and its structure.
+#### -How to use SCSS.
+#### -The concept of single page application (SPA).
+#### -Passing data through routing.
+#### -Services such as authentication, data and how to implement them.
+#### -How to import external modules and plugins. 
+#### In addition, I merged the app with a validated login system using reactive forms module.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Take a Look!
+#### You can access the website through this link: https://noxe-byhossam.netlify.app/
