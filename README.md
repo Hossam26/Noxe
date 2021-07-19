@@ -16,4 +16,4 @@ An application that offers help with searching for a good movie or TV show to wa
 #### In addition, I merged the app with a validated login system using reactive forms module.
 
 ## Take a Look!
-#### You can access the website through this link: https://noxe-byhossam.netlify.app/
+#### You can access the website through this link: https://noxe-byhossam.vercel.app/
